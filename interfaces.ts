@@ -1,7 +1,4 @@
 interface Vehicle {
-    name: string;
-    year: Date;
-    broken: boolean;
     summary(): string;
 };
 
@@ -15,7 +12,7 @@ const oldCivic = {
 };
 
 const printVehicle = (vehicle: Vehicle ): void => {
-    console.log(`Name: ${vehicle.name} Year: ${vehicle.year} Broken? ${vehicle.broken}`);
+    console.log(vehicle.summary());
 };
 
 printVehicle(oldCivic);
