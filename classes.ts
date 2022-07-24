@@ -26,7 +26,7 @@ class Car extends Vehicle {
     }
 };
 
-const car = new Car('blue');
+const car = new Car(4, 'blue');
 car.startDrivingProcess();
 
 
