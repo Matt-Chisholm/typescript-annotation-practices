@@ -12,7 +12,7 @@ class Boat {
     }
 }
 
-function logError(target: any, key: string): void {
+function logError(target: any, key: string, desc: PropertyDescriptor): void {
     console.log('Target:', target);
     console.log('Key:', key);
 }
