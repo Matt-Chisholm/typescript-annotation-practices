@@ -6,4 +6,4 @@ const plane = {
 
 Reflect.defineMetadata('note', 'hello!', plane);
 
-console.log(plane);
+console.log(Reflect.getMetadata('note', plane));
