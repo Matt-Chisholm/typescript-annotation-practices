@@ -1,9 +1,14 @@
 import 'reflect-metadata';
 
 const plane = {
-    color: 'red'
+    color: 'red';
+
+    @markFunction
+    fly(): void {
+        console.log('swoosh');
+    }
 };
 
-Reflect.defineMetadata('note', 'hello!', plane, 'color');
-
-console.log(Reflect.getMetadata('note', plane, 'color'));
+function markFunction(target: PlaybackDirection, key: string) {
+    Reflect.defineMetadata('secret', 123, target, key);
+}
