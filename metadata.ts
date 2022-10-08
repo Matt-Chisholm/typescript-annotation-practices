@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 
-const plane = {
-    color: 'red';
+class plane {
+    color: string = 'red';
 
     @markFunction
     fly(): void {
