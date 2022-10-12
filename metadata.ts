@@ -3,12 +3,14 @@ import 'reflect-metadata';
 class Plane {
     color: string = 'red';
 
-    @markFunction
+    @markFunction('HELLO!')
     fly(): void {
         console.log('swoosh');
     }
 };
 
-function markFunction(target: Plane, key: string) {
-    Reflect.defineMetadata('secret', 123, target, key);
+function markFunction(secretInfo: string) {
+    return function(target: Plane, key: string) {
+        Reflect.defineMetadata('secret', secretInfo, target, key);
+    }
 }
