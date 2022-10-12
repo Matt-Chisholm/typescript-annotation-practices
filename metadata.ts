@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 
-class plane {
+class Plane {
     color: string = 'red';
 
     @markFunction
@@ -9,6 +9,6 @@ class plane {
     }
 };
 
-function markFunction(target: PlaybackDirection, key: string) {
+function markFunction(target: Plane, key: string) {
     Reflect.defineMetadata('secret', 123, target, key);
 }
